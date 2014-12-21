@@ -51,7 +51,7 @@ li{
 }
 
 .cat-list ul{
-	
+	display: none;
 }
 
 .cat-list ul>li{
@@ -83,7 +83,7 @@ li{
 	font-size: 14px;
 	margin-bottom: 5px;
 	letter-spacing: 1px;
-	width: 300px;
+	width: 290px;
 	overflow:hidden;;/* 内容超出宽度时隐藏超出部分的内容 */
 	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
 	white-space:nowrap;/* 不换行 */
@@ -118,6 +118,64 @@ li{
 	width: 20px;
 }
 
+/*loading css*/
+
+.spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 10px;
+}
+ 
+.spinner > div {
+  background-color: #1d1d1d;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.net-ok{
+	color: #1d1d1d;
+}
 
 
 

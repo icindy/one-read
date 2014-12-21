@@ -21,6 +21,7 @@
 
   "permissions": [
     "bookmarks",
-    "http://jandan.net/feed"
+    "http://jandan.net/feed",
+    "http://xueqiu.com/hots/topic/rss"
   ]
 }  
