@@ -24,18 +24,31 @@ li{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #bbbbbb;
 }
-
+.header ul{
+	position: relative;
+}
 
 .header ul li{
 	display: inline-block;
 	margin-left: 8px;
+
 }
 .header ul>li>a{
 	display: block;
+	
 }
 .header ul>li>a>img{
 	height: 18px;
 	width: 18px;
+}
+#nowDot{
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border: 2px solid #666;
+	border-radius: 2px;
+	top: 23px;
+	left: 17px;
 }
 
 
@@ -133,7 +146,7 @@ li{
 }
  
 .spinner > div {
-  background-color: #1d1d1d;
+  background-color: #bbbbbb;
   height: 100%;
   width: 6px;
   display: inline-block;
@@ -178,7 +191,7 @@ li{
 }
 
 .net-ok{
-	color: #1d1d1d;
+	color: #bbbbbb;
 }
 
 

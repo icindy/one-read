@@ -1,17 +1,12 @@
 $(function(){
+
 	//首次点击后展示v2x列表
 	$("#v2x-page").show();
 	//首次加入xueqiu
 	commonAjaxFn("GET","http://xueqiu.com/hots/topic/rss","xml",xueqiuFn);
-	//煎蛋a链接
-	$("#jandan-btn").on('click',function(){
-		$("#jandan-page").html("");
-		commonAjaxFn("GET","http://jandan.net/feed","xml",jandanFn);
-    	return false;
-    });
-
     //雪球
 	$("#xueqiu-btn").on('click',function(){
+		$("#nowDot").css({'left':'17px'});
 		$("#xueqiu-page").html("");
 		commonAjaxFn("GET","http://xueqiu.com/hots/topic/rss","xml",xueqiuFn);
 	    return false;
@@ -19,6 +14,7 @@ $(function(){
 
 	//mindstore
 	$("#mindstore-btn").on('click',function(){
+		$("#nowDot").css({'left':'45px'});
 		$("#mindstore-page").html("");
 		commonAjaxFn("GET","http://mindstore.io/","html",mindstoreFn);
 	    return false;
@@ -26,6 +22,7 @@ $(function(){
 
 	//segmentfault
 	$("#segmentfault-btn").on('click',function(){
+		$("#nowDot").css({'left':'75px'});
 		$("#segmentfault-page").html("");
 		commonAjaxFn("GET","http://segmentfault.com/blogs","html",segmentfaultFn);
 	    return false;
@@ -33,6 +30,7 @@ $(function(){
 
 	//zhihu
 	$("#zhihu-btn").on('click',function(){
+		$("#nowDot").css({'left':'105px'});
 		$("#zhihu-page").html("");
 		commonAjaxFn("GET","http://www.zhihu.com/explore","html",zhihuFn);
 	    return false;
@@ -40,25 +38,41 @@ $(function(){
 
 	//solidot
 	$("#solidot-btn").on('click',function(){
+		$("#nowDot").css({'left':'136px'});
 		$("#solidot-page").html("");
 		commonAjaxFn("GET","http://solidot.org.feedsportal.com/c/33236/f/556826/index.rss","xml",solidotFn);
 	    return false;
 	});
 
-	//next 36
-	$("#next36-btn").on('click',function(){
-		$("#next36-page").html("");
-		commonAjaxFn("GET","http://next.36kr.com/posts","html",next36Fn);
-	    return false;
-	});
-
 	//jianshu
 	$("#jianshu-btn").on('click',function(){
+		$("#nowDot").css({'left':'166px'});
 		$("#jianshu-page").html("");
 		commonAjaxFn("GET","http://www.jianshu.com/","html",jianshuFn);
 	    return false;
 	});
 
+	//next 36
+	$("#next36-btn").on('click',function(){
+		$("#nowDot").css({'left':'196px'});
+		$("#next36-page").html("");
+		commonAjaxFn("GET","http://next.36kr.com/posts","html",next36Fn);
+	    return false;
+	});
+
+	//煎蛋a链接
+	$("#jandan-btn").on('click',function(){
+		$("#nowDot").css({'left':'226px'});
+		$("#jandan-page").html("");
+		commonAjaxFn("GET","http://jandan.net/feed","xml",jandanFn);
+    	return false;
+    });
+
+
+	$("#paymeBtn").on('click',function(){
+		$("#payMe").submit();
+		return false;
+	});
 	
 	
 });
@@ -294,6 +308,13 @@ function next36Fn(data){
 function delHtmlTag(str){
   return str.replace(/<[^>]+>/g,"");//去掉所有的html标记
  }
+
+
+//all page
+function allPage(data){
+	$(".container").text(data);
+}
+
 
 
 

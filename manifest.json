@@ -21,7 +21,7 @@
 
   "permissions": [
     "bookmarks",
-    "http://*/"
+    "http://*/",
     // "http://jandan.net/feed",
     // "http://xueqiu.com/hots/topic/rss",
     // "http://mindstore.io/",
@@ -30,5 +30,7 @@
     // "http://solidot.org.feedsportal.com/c/33236/f/556826/index.rss",
     // "http://www.jianshu.com/",
     // "http://next.36kr.com/posts"
+    "https://github.com/icindy/one-read/blob/master/popup.html",
+    "http://cindyfn.com/about.html"
   ]
 }  

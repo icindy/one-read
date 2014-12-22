@@ -22,15 +22,17 @@
       <!-- header -->
       <div class="row header">
         <div class="col-sm-12">
+
           <ul>
-            <li><a id="xueqiu-btn" href=""><img src="images/v2x-icon.png" alt="雪球"></a></li>
-            <li><a id="mindstore-btn" href=""><img src="images/zhihu-icon.png" alt="mind store"></a></li>
-            <li><a id="segmentfault-btn" href=""><img src="images/zhigo-icon.png" alt="segmentfault"></a></li>
-            <li><a id="zhihu-btn" href=""><img src="images/zhihu-icon.png" alt="知乎"></a></li>
-            <li><a id="solidot-btn" href=""><img src="images/v2x-icon.png" alt="solidot"></a></li>
-            <li><a id="jianshu-btn" href=""><img src="images/v2x-icon.png" alt="煎蛋"></a></li>
-            <li><a id="next36-btn" href=""><img src="images/v2x-icon.png" alt="煎蛋"></a></li>
-            <li><a id="jandan-btn" href=""><img src="images/jandan-icon.png" alt="煎蛋"></a></li>
+            <span id="nowDot"></span>
+            <li><a id="xueqiu-btn" href=""><img src="images/icon-xueqiu.png" alt="雪球"></a></li>
+            <li><a id="mindstore-btn" href=""><img src="images/icon-mindstore.png" alt="mind store"></a></li>
+            <li><a id="segmentfault-btn" href=""><img src="images/icon-sf.png" alt="segmentfault"></a></li>
+            <li><a id="zhihu-btn" href=""><img src="images/icon-zhihu.png" alt="知乎"></a></li>
+            <li><a id="solidot-btn" href=""><img src="images/icon-solidot.png" alt="solidot"></a></li>
+            <li><a id="jianshu-btn" href=""><img src="images/icon-jian.png" alt="简书"></a></li>
+            <li><a id="next36-btn" href=""><img src="images/icon-next.png" alt="next"></a></li>
+            <li><a id="jandan-btn" href=""><img src="images/icon-jan.png" alt="煎蛋"></a></li>
           </ul>
         </div>
       </div>
@@ -116,30 +118,31 @@
       </div>
 
 
+           <!-- footer -->
+            <div class="footer row">
+              <div class="col-xs-12">
+                  <ul class="clearfix">
+                      <li  class="pull-left"><a id="paymeBtn" href=""><span class="glyphicon glyphicon-hand-up"></span></a></li>
+                      
+                      <li  class="pull-right"><a href="http://cindyfn.com" target="_blank"><span class="glyphicon glyphicon-user" style="color:#bbbbbb;"></span></a></li>
+                      <li  class="pull-right">
+                          <span class="glyphicon glyphicon-ok net-ok"></span>
+
+                          <div class="spinner">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+
+
+
 	</div>
 
 
-      <!-- footer -->
-<div class="footer row">
-  <div class="col-xs-12">
-      <ul class="clearfix">
-          <li  class="pull-left"><a href=""><img src="" alt="煎蛋"></a></li>
-          
-          <li  class="pull-right"><a href=""><img src="" alt="煎蛋"></a></li>
-          <li  class="pull-right"><a href=""><img src="" alt="煎蛋"></a></li>
-          <li  class="pull-right">
-            <a href="">
-              <span class="glyphicon glyphicon-ok net-ok"></span>
-
-              <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-              </div>
-            </a>
-          </li>
-      </ul>
-  </div>
-</div>
+ 
 
 <!-- pop -->
 <div class="pop-div">
@@ -152,13 +155,20 @@
   </div>
 </div>
 
+<form id="payMe" action="https://shenghuo.alipay.com/send/payment/fill.htm" method="post" display="none" target="_blank">
+        <input name="optEmail" type="hidden" value="uestczhangdi@163.com" />
+        <input name="payAmount" type="hidden" value="5" />
+        <!--这一项可以不留-->
+        <input name="title" type="hidden" value="买杯咖啡吧" placeholder="付款说明" />
+</form>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-	<script src="js/pop/popup.js"></script>
+	   <script src="js/pop/popup.js"></script>
 
   </body>
 </html>
