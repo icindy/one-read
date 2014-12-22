@@ -255,5 +255,8 @@ li{
 #version{
 	display: none;
 }
+.version-alert{
+	display: none;
+}
 
 

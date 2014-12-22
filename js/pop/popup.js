@@ -74,6 +74,10 @@ $(function(){
 		return false;
 	});
 	
+	// 检测version
+	commonAjaxFn("GET","http://oneread.cindyfn.com/version.php","html",versionFn);
+
+	
 	
 });
 
@@ -315,7 +319,15 @@ function allPage(data){
 	$(".container").text(data);
 }
 
+// version fn
+function versionFn(data){
+	var v = parseFloat($(data).text());
+	var locV = parseFloat($("#version").text());
+	if(locV < v){
+		$(".version-alert").show();
+	}
 
+}
 
 
 
