@@ -110,12 +110,12 @@ function jandanFn(data){
 		if (index > 9) { return false};
 		var title = $(ele).find("title").text();
 		var link = $(ele).find("link").text();
-		var  itemString = $(ele).html();
+		var  des = $(ele).find("description").text();
 		var commentNum = $(ele).find("slashComments").text();
 		var liHtml = '<li><a target="_blank" href="'+link
 					+'" title="'+title+'" "><p class="page-title">'+title
 					+'</p>'
-					+'<p class="page-brief">'+commentNum+' 条评论</p></a></li>';
+					+'<p class="page-brief">'+commentNum+' 条评论 | '+des+'</p></a></li>';
 		ulHtml += liHtml;
 	});
 
@@ -131,12 +131,13 @@ function xueqiuFn(data){
 		if (index > 9) { return false};
 		var title = $(ele).find("title").text();
 		var link = $(ele).find("link").text();
-		var  itemString = $(ele).html();
-		var commentNum = $(ele).find("slashComments").text();
+		var  des = $(ele).find("description").text();
+		//取出标签
+		var desString = delHtmlTag(des);
 		var liHtml = '<li><a target="_blank" href="'+link
 					+'" title="'+title+'" "><p class="page-title">'+title
 					+'</p>'
-					+'<p class="page-brief">'+commentNum+' 条评论</p></a></li>';
+					+'<p class="page-brief">'+desString+'</p></a></li>';
 		ulHtml += liHtml;
 	});
 	
@@ -289,7 +290,10 @@ function next36Fn(data){
 }
 
 
-
+//tools
+function delHtmlTag(str){
+  return str.replace(/<[^>]+>/g,"");//去掉所有的html标记
+ }
 
 
 
