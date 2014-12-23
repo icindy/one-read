@@ -48,7 +48,7 @@ $(function(){
 	$("#jianshu-btn").on('click',function(){
 		$("#nowDot").css({'left':'166px'});
 		$("#jianshu-page").html("");
-		commonAjaxFn("GET","http://www.jianshu.com/","html",jianshuFn);
+		commonAjaxFn("GET","http://www.jianshu.com/recommendations/notes","html",jianshuFn);
 	    return false;
 	});
 
