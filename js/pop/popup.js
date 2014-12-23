@@ -296,7 +296,7 @@ function next36Fn(data){
 		var zanNum = $(ele).find(".vote-count").text();
 		var mindDes = $(ele).find(".post-tagline").text();
 
-		var liHtml = '<li><a target="_blank" href="'+link
+		var liHtml = '<li><a target="_blank" href="http://next.36kr.com'+link
 					+'" title="'+title+'" "><p class="page-title">'+title
 					+'</p>'
 					+'<p class="page-brief">'+zanNum+'次支持 | '+mindDes+'</p></a></li>';
