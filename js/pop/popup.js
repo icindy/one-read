@@ -272,7 +272,7 @@ function jianshuFn(data){
 		var zanNum = $(ele).find(".like-icon-button").remove("i").text();
 		var mindDes = $(ele).find(".content").text();
 
-		var liHtml = '<li><a target="_blank" href="'+link
+		var liHtml = '<li><a target="_blank" href="http://www.jianshu.com'+link
 					+'" title="'+title+'" "><p class="page-title">'+title
 					+'</p>'
 					+'<p class="page-brief">'+zanNum+'次喜欢 | '+mindDes+'</p></a></li>';
@@ -321,7 +321,7 @@ function allPage(data){
 
 // version fn
 function versionFn(data){
-	var v = parseFloat($(data).text());
+	var v = parseFloat($(data).find("#version").text());
 	var locV = parseFloat($("#version").text());
 	if(locV < v){
 		$(".version-alert").show();
